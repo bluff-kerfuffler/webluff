@@ -1,3 +1,6 @@
 <p>
   onboard works!
 </p>
+<webcam [trigger]="triggerObservable" (imageCapture)="handleImage($event)"></webcam>
+<br/>
+<button class="actionBtn" (click)="triggerAuthentication();">Authenticate</button>

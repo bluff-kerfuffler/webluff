@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {WebcamImage} from 'ngx-webcam';
 import {Observable, Subject} from 'rxjs';
-import {AuthResponse, BluffService} from '../bluff.service';
+import {BluffService} from '../bluff.service';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
@@ -13,7 +13,6 @@ export class VerifyComponent implements OnInit {
   private trigger: Subject<void> = new Subject<void>();
   private token: string;
   private user_id: string;
-  private success = false;
 
   constructor(private route: ActivatedRoute, private bluffService: BluffService) { }
 
@@ -27,7 +26,8 @@ export class VerifyComponent implements OnInit {
 
   public handleImage(webcamImage: WebcamImage): void {
     this.bluffService.verifyImage(this.token, this.user_id, webcamImage.imageAsBase64).subscribe(
-      (response: AuthResponse) => this.success = response.success);
+      (response: Object) => {}
+    );
   }
 
   public get triggerObservable(): Observable<void> {
