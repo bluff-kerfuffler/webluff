@@ -8,7 +8,7 @@ import {log} from 'util';
 export class BluffService {
   // private bluffBae = 'http://35.234.145.74:8080/';
   // private bluffBae = 'http://localhost:8080/';
-  private bluffBae = 'https://kerfuffler.duckdns.org:8080'
+  private bluffBae = 'https://kerfuffler.duckdns.org:8080/'
 
   constructor(private http: HttpClient) { }
 
