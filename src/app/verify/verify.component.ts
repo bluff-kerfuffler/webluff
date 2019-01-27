@@ -30,25 +30,25 @@ export class VerifyComponent implements OnInit {
     this.camEnabled = false;
 
 
-    if (navigator.getUserMedia) {
+    // if (navigator.getUserMedia) {
 
-      navigator.getUserMedia(
+    //   navigator.getUserMedia(
 
-        {video: true}, 
+    //     {video: true}, 
 
-        function(media) {
-          // debugger;
-          this.camEnabled = true;
-           console.info('good to go');
-        }.bind(this),
+    //     function(media) {
+    //       // debugger;
+    //       this.camEnabled = true;
+    //        console.info('good to go');
+    //     }.bind(this),
 
-        function(err) {
-          // debugger;
-          this.camEnabled = false;
-          console.error('enable plsss');
-        }.bind(this)
-        );
-    }
+    //     function(err) {
+    //       // debugger;
+    //       this.camEnabled = false;
+    //       console.error('enable plsss');
+    //     }.bind(this)
+    //     );
+    // }
   }
 
 
