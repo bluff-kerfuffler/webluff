@@ -21,6 +21,7 @@ export class VerifyComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private bluffService: BluffService) { }
 
   ngOnInit() {
+    
     this.route.queryParams.subscribe(params => {
       console.log(params);
       this.token = params['token'];
