@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { OnboardComponent } from './onboard/onboard.component';
 import { VerifyComponent } from './verify/verify.component';
 import { RequestaccessComponent } from './requestaccess/requestaccess.component';
-import { WebcamModule} from 'ngx-webcam';
+import { WebcamModule } from 'ngx-webcam';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { WebcamModule} from 'ngx-webcam';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    WebcamModule
+    WebcamModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

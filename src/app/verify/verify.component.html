@@ -1,4 +1,6 @@
 <p>
   verify works!
 </p>
-<webcam [trigger]=""></webcam>
+<webcam [trigger]="triggerObservable" (imageCapture)="handleImage($event)"></webcam>
+<br/>
+<button class="actionBtn" (click)="triggerAuthentication();">Authenticate</button>
