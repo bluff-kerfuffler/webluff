@@ -21,7 +21,7 @@ export class VerifyComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private bluffService: BluffService) { }
 
   ngOnInit() {
-    
+
     this.route.queryParams.subscribe(params => {
       console.log(params);
       this.token = params['token'];
@@ -57,7 +57,7 @@ export class VerifyComponent implements OnInit {
   public handleImage(webcamImage: WebcamImage): void {
     this.bluffService.verifyImage(this.token, this.user_id, webcamImage.imageAsBase64).subscribe(
       (response: Object) => {
-        debugger;
+        console.info('response:', response);
       }
     );
   }
